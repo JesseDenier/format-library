@@ -1,0 +1,30 @@
+{
+  "name": "format-paywall-root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start:client": "npm --prefix client run dev",
+    "start:server": "npm --prefix server run dev",
+    "build": "npm run install:all && npm run build:client && npm run build:server",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "serve": "npm --prefix server run start",
+    "seed": "npm run seed --prefix server"
+  },
+  "keywords": [],
+  "author": "The Format Group (Jesse Denier)",
+  "license": "Proprietary",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "file-saver": "^2.0.5",
+    "nodemailer": "^6.9.15",
+    "pdf-lib": "^1.17.1",
+    "react-router-dom": "^6.26.0"
+  }
+}

@@ -1,0 +1,4 @@
+/* Acts as the input file for Tailwind to create output.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

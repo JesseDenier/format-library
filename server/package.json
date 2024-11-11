@@ -1,0 +1,28 @@
+{
+  "name": "format-paywall-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "build": "echo 'No build step for server'",
+    "seed": "node utils/seed.js"
+  },
+  "keywords": [],
+  "author": "The Format Group (Jesse Denier)",
+  "license": "Proprietary",
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "format-paywall-root": "file:..",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.3"
+  }
+}
