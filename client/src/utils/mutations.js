@@ -110,7 +110,7 @@ export const SEND_PASSWORD_EMAIL = gql`
   }
 `;
 
-// GraphQL mutation for sending user data to ISCA
+// GraphQL mutation for sending user data to Kristy
 export const SEND_USER_DATA_EMAIL = gql`
   mutation sendUserDataEmail($email: String!, $confirmNumber: String!) {
     sendUserDataEmail(email: $email, confirmNumber: $confirmNumber) {

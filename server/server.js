@@ -22,7 +22,8 @@ const app = express();
 
 // CORS Configuration
 const corsOptions = {
-  origin: "https://www.iscapublications.com", // Ensure this matches your frontend URL exactly
+  origin: "https://format-library.onrender.com", // Ensure this matches your frontend URL exactly
+  //! This will need to be updated to the paid domain name.
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
   credentials: true, // If you need to allow credentials like cookies
   optionsSuccessStatus: 200, // Response status for successful OPTIONS requests

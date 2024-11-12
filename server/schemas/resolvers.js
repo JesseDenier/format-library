@@ -298,14 +298,15 @@ const resolvers = {
     },
 
     // Mutation to send a user their confirmNumber
+    //! This will need to be updated with the paid domain name.
     sendConfirmEmail: async (_, { email, confirmNumber }) => {
       try {
         const info = await transporter.sendMail({
-          from: '"ISCA No Reply" <theformatgrouptech@gmail.com>',
+          from: '"Format No Reply" <theformatgrouptech@gmail.com>',
           to: email,
           subject: "Email Confirmation",
-          text: `Email Confirmation Number = ${confirmNumber}\nInput this number at iscapublications.com/confirm while logged in to confirm your email address.`,
-          html: `<p>Email Confirmation Number = <b>${confirmNumber}</b><br>Input this number at iscapublications.com/confirm while logged in to confirm your email address.</p>`,
+          text: `Email Confirmation Number = ${confirmNumber}\nInput this number at https://format-library.onrender.com/confirm while logged in to confirm your email address.`,
+          html: `<p>Email Confirmation Number = <b>${confirmNumber}</b><br>Input this number at https://format-library.onrender.com/confirm while logged in to confirm your email address.</p>`,
         });
 
         console.log("Message sent: %s", info.messageId);
@@ -320,7 +321,7 @@ const resolvers = {
     sendPasswordEmail: async (_, { email, confirmNumber }) => {
       try {
         const info = await transporter.sendMail({
-          from: '"ISCA No Reply" <theformatgrouptech@gmail.com>',
+          from: '"Format No Reply" <theformatgrouptech@gmail.com>',
           to: email,
           subject: "Password Reset Confirmation",
           text: `Password Reset Confirmation Number = ${confirmNumber}`,
@@ -335,7 +336,7 @@ const resolvers = {
       }
     },
 
-    // Mutation to send users data to ISCA
+    // Mutation to send users data to Kristy
     sendUserDataEmail: async (_, { email, confirmNumber }) => {
       try {
         const user = await User.findOne({ email });
@@ -348,9 +349,9 @@ const resolvers = {
 
         // Send the email using nodemailer
         const info = await transporter.sendMail({
-          from: '"ISCA No Reply" <theformatgrouptech@gmail.com>',
-          to: "adminsupport@iscainfo.com",
-          subject: "ISCA Publications New Confirmed User",
+          from: '"Format Sample No Reply" <theformatgrouptech@gmail.com>',
+          to: "kristy@formatllc.com",
+          subject: "Format Sample Site New Confirmed User",
           text: `New User\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nOrganization: ${organization}\nRole: ${role}`,
           html: `
         <p>New User</p>

@@ -66,18 +66,12 @@ function Card({
 const HomePage = () => {
   const loggedIn = Auth.loggedIn(); // Check if the user is logged in
 
-  // Default ownership status (not logged in or access not granted)
-  let modelOwnership = getOwnershipStatus(false);
-  let progressionOwnership = getOwnershipStatus(false);
-
   if (loggedIn) {
     const userId = Auth.getProfile().data._id; // Get logged-in user's ID
     const { loading, data } = useQuery(QUERY_USER, { variables: { userId } });
 
     if (!loading && data) {
       const user = data.user || {}; // Fetch user data
-      modelOwnership = getOwnershipStatus(user.modelAccess); // Get ownership status for model access
-      progressionOwnership = getOwnershipStatus(user.progressionAccess); // Get ownership status for domain access
     } else if (loading) {
       // Return null or a loading spinner to prevent rendering
       return <div>Loading...</div>;
@@ -90,8 +84,7 @@ const HomePage = () => {
       link: "cewdsampler",
       title: "2023 CEWD Digital Sampler",
       photo: "cover_model.jpg",
-      description:
-        "The ISCA International Model provides a framework for encouraging and promoting best practices among international school counselors. Overall, the Model is our profession's manual on what, why, and how to implement a school counseling program.",
+      description: "Placeholder",
       label: "Free",
       labelStyle: "bg-[#006666] text-white",
     },
@@ -99,8 +92,7 @@ const HomePage = () => {
       link: "/private/isca_student_standards.pdf",
       title: "CEWD Print Sampler",
       photo: "cover_student_standards.jpg",
-      description:
-        "Internationally recognized content standards for students that guide school counseling programs by outlining the specific knowledge, attitudes, and skills that students should be able to demonstrate as a result of an effective school counseling program.",
+      description: "Placeholder",
       label: "Free",
       labelStyle: "bg-[#006666] text-white",
       isExternal: true,
@@ -109,8 +101,7 @@ const HomePage = () => {
       link: "modelsupporttools",
       title: "Model Support Tools",
       photo: "cover_model_support_tools.jpg",
-      description:
-        "A collection of smaller resources that perfectly complement the ISCA model.",
+      description: "Placeholder",
       label: "Free",
       labelStyle: "bg-[#006666] text-white",
     },

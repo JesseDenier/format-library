@@ -14,8 +14,6 @@ import App from "./App";
 
 // Imports the authentication components which check user status before displaying pages
 import AuthRoute from "./components/AuthRoute";
-import ModelAccessRoute from "./components/ModelAccessRoute";
-import ProgressionAccessRoute from "./components/ProgressionAccessRoute";
 
 // Imports the pages the router will use to conditionally show the appropriate views
 import ErrorPage from "./pages/ErrorPage";
@@ -27,19 +25,6 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ComingSoonPage from "./pages/ComingSoonPage";
 import CEWDSamplerPage from "./pages/CEWDSamplerPage";
 import ModelSupportToolsPage from "./pages/ModelSupportToolsPage";
-import ProgressionPage from "./pages/ProgressionPage";
-import DomainSocialPage from "./pages/DomainSocialPage";
-import DomainGlobalPage from "./pages/DomainGlobalPage";
-import DomainCareerPage from "./pages/DomainCareerPage";
-import DomainAcademicFreePage from "./pages/DomainAcademicFreePage";
-import DomainAcademicPage from "./pages/DomainAcademicPage";
-import DomainAllPage from "./pages/DomainAllPage";
-import DomainIntroPage from "./pages/DomainIntroPage";
-import ProgressionVideoPage from "./pages/ProgressionVideoPage";
-import VideoGlobalPage from "./pages/VideoGlobalPage";
-import VideoCareerPage from "./pages/VideoCareerPage";
-import VideoAcademicPage from "./pages/VideoAcademicPage";
-import VideoSocialPage from "./pages/VideoSocialPage";
 
 // Imports the Welcome Pop Up
 import WelcomePopUp from "./components/WelcomePopUp";
@@ -75,77 +60,17 @@ const router = createBrowserRouter([
         path: "/comingsoon",
         element: <ComingSoonPage />,
       },
-      {
-        path: "/cewdsampler",
-        element: <CEWDSamplerPage />,
-      },
+
       {
         element: <AuthRoute />, // Requires the user to be logged in and have confirmStatus true to view child pages
         children: [
           {
+            path: "/cewdsampler",
+            element: <CEWDSamplerPage />,
+          },
+          {
             path: "/modelsupporttools",
             element: <ModelSupportToolsPage />,
-          },
-          {
-            path: "/progressionintro",
-            element: <DomainIntroPage />,
-          },
-          {
-            path: "/academicdomainfree",
-            element: <DomainAcademicFreePage />,
-          },
-          {
-            element: <ModelAccessRoute />, // Requires the user to have ModelAccess to view child pages
-            children: [],
-          },
-          {
-            element: <ProgressionAccessRoute />, // Requires the user to have ProgressionAccess to view child pages
-            children: [
-              {
-                path: "/progression",
-                element: <ProgressionPage />,
-              },
-              {
-                path: "/socialdomain",
-                element: <DomainSocialPage />,
-              },
-              {
-                path: "/globaldomain",
-                element: <DomainGlobalPage />,
-              },
-              {
-                path: "/careerdomain",
-                element: <DomainCareerPage />,
-              },
-              {
-                path: "/academicdomain",
-                element: <DomainAcademicPage />,
-              },
-              {
-                path: "/completeprogression",
-                element: <DomainAllPage />,
-              },
-              {
-                path: "/progressionvideos",
-                element: <ProgressionVideoPage />,
-              },
-              {
-                path: "/globalvideo",
-                element: <VideoGlobalPage />,
-              },
-              {
-                path: "/careervideo",
-                element: <VideoCareerPage />,
-              },
-              {
-                path: "/academicvideo",
-                element: <VideoAcademicPage />,
-              },
-              {
-                path: "/socialvideo",
-                element: <VideoSocialPage />,
-              },
-            ],
           },
         ],
       },
