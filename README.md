@@ -4,7 +4,7 @@
 
 ## Description
 
-This is a site created by The Format Group for use by ISCA (International School Counselors Association). The site is designed to better deliver electronic training materials to ISCA members, and ISCA material purchasers without the need for 3rd party software, file sending, or 3rd-party distribution fears.
+This is a site created by The Format Group to sample of our work. The site delivers electronic training materials to without the need for 3rd party software, file sending, or distribution fears.
 
 The site is deployed using Render under Jesse Denier's personal account, and the domain is purchased through SquareSpace under Jesse Denier's Format account.
 
@@ -18,11 +18,11 @@ The site is deployed using Render under Jesse Denier's personal account, and the
 
 ## Installation
 
-There is no need to install anything. Simply visit https://www.iscapublications.com/.
+There is no need to install anything. Simply visit https://format-library.onrender.com.
 
 ## Usage
 
-First follow the installation steps. Then you will need to either create an account or login using the navigation links in the top right. Once logged into an account with proper access return to the Home page and you can click the cards for any ISCA resources and you will be taken to a restricted page with access to the document.
+First follow the installation steps. Then you will need to either create an account or login using the navigation links in the top right. Once logged into an account return to the Home page and you can click the cards for any resources and you will be taken to a restricted page with access to the document.
 
 ## Credits
 
@@ -32,8 +32,7 @@ Main Contributors:
 
 Additional Contributors:
 
-- [James Ohlhausen](https://github.com/OhlhJames) - Contract Software Developer
-- [Torre Taylor](https://github.com/tostaylo) - Volunteer Mentorship
+- None
 
 3rd Party Assets and Tutorials Used:
 
