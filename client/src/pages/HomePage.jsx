@@ -144,11 +144,10 @@ const HomePage = () => {
       {/* Tagline centered above the cards */}
       <div className="text-center mb-4 w-3/4 mx-auto">
         <h2 className="text-xl font-semibold">
-          Welcome to the ISCA Publication Library! Here, you'll find a range of
-          ISCA publications available for purchase and open to the public. These
-          resources are specifically designed to help school counselors and
-          educators implement comprehensive counseling programs and foster
-          essential life skills in all learners.
+          Welcome to The Format Group's Sample Library! Explore our diverse
+          educational materials and see firsthand the type of asynchronous
+          learning management systems we can build. Create an account, log in,
+          and discover all we have to offer!
         </h2>
       </div>
       {/* Container for the home page content */}
