@@ -25,7 +25,7 @@ import SignUpPage from "./pages/SignUpPage";
 import ConfirmPage from "./pages/ConfirmPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ComingSoonPage from "./pages/ComingSoonPage";
-import ModelPage from "./pages/ModelPage";
+import CEWDSamplerPage from "./pages/CEWDSamplerPage";
 import ModelSupportToolsPage from "./pages/ModelSupportToolsPage";
 import ProgressionPage from "./pages/ProgressionPage";
 import DomainSocialPage from "./pages/DomainSocialPage";
@@ -76,6 +76,10 @@ const router = createBrowserRouter([
         element: <ComingSoonPage />,
       },
       {
+        path: "/cewdsampler",
+        element: <CEWDSamplerPage />,
+      },
+      {
         element: <AuthRoute />, // Requires the user to be logged in and have confirmStatus true to view child pages
         children: [
           {
@@ -92,12 +96,7 @@ const router = createBrowserRouter([
           },
           {
             element: <ModelAccessRoute />, // Requires the user to have ModelAccess to view child pages
-            children: [
-              {
-                path: "/model",
-                element: <ModelPage />,
-              },
-            ],
+            children: [],
           },
           {
             element: <ProgressionAccessRoute />, // Requires the user to have ProgressionAccess to view child pages
