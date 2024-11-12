@@ -8,10 +8,8 @@ export const QUERY_USER = gql`
       firstName
       lastName
       email
+      organization
       role
-      school
-      modelAccess
-      progressionAccess
       confirmNumber
       confirmStatus
     }
@@ -25,10 +23,8 @@ export const CHECK_USER_EMAIL = gql`
       firstName
       lastName
       email
+      organization
       role
-      school
-      modelAccess
-      progressionAccess
       confirmNumber
       confirmStatus
     }

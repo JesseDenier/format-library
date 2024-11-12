@@ -7,10 +7,8 @@ export const ADD_USER = gql`
     $lastName: String!
     $email: String!
     $password: String!
+    $organization: String!
     $role: String!
-    $school: String!
-    $modelAccess: Boolean
-    $progressionAccess: Boolean
     $confirmNumber: Int!
     $confirmStatus: Boolean
   ) {
@@ -19,10 +17,8 @@ export const ADD_USER = gql`
       lastName: $lastName
       email: $email
       password: $password
+      organization: $organization
       role: $role
-      school: $school
-      modelAccess: $modelAccess
-      progressionAccess: $progressionAccess
       confirmNumber: $confirmNumber
       confirmStatus: $confirmStatus
     ) {
@@ -32,10 +28,8 @@ export const ADD_USER = gql`
         firstName
         lastName
         email
+        organization
         role
-        school
-        modelAccess
-        progressionAccess
         confirmNumber
         confirmStatus
       }

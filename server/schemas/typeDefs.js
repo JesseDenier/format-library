@@ -2,7 +2,7 @@
 import { gql } from "graphql-tag";
 
 // Notes for everything below:
-//   User = Defines the User type with fields _id, firstName, lastName, email, password, school, and modelAccess
+//   User = Defines the User type with fields _id, firstName, lastName, email, password, organization, and role
 //   Query = Defines the Query type with queries to fetch all users and a single user by ID
 //   Mutation = Defines the Mutation type with operations for adding a user, login, and logout
 //      addUser = Mutation to add a new user, returns an AuthPayload containing a token and user
@@ -23,10 +23,8 @@ const typeDefs = gql`
     lastName: String!
     email: String!
     password: String!
+    organization: String!
     role: String!
-    school: String!
-    modelAccess: Boolean!
-    progressionAccess: Boolean!
     confirmNumber: Int!
     confirmStatus: Boolean!
   }
@@ -49,10 +47,8 @@ const typeDefs = gql`
       lastName: String!
       email: String!
       password: String!
+      organization: String!
       role: String!
-      school: String!
-      modelAccess: Boolean
-      progressionAccess: Boolean
       confirmNumber: Int!
       confirmStatus: Boolean
     ): AuthPayload
