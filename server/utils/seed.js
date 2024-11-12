@@ -9,7 +9,7 @@ import bcrypt from "bcrypt";
 import User from "../models/User.js";
 
 // Get the database URL from environment variables
-const formatpaywallDB = process.env.FORMATPAYWALL_DB;
+const formatpaywallDB = process.env.FORMATLIBRARY_DB;
 
 // Function to seed the database with initial data
 const seedData = async () => {
@@ -20,27 +20,13 @@ const seedData = async () => {
     // Sample user data to seed
     const users = [
       {
-        firstName: "Jane",
-        lastName: "Smith",
-        email: "paid@gmail.com",
-        password: "Password1",
-        role: "School Counselor",
-        school: "Global School",
-        modelAccess: true,
-        progressionAccess: true,
+        firstName: "Johnny",
+        lastName: "Appleseed",
+        email: "johnnyappleseed@gmail.com",
+        password: "Goodddog1",
+        organization: "The Format Group",
+        role: "Seedling",
         confirmNumber: 567890,
-        confirmStatus: true,
-      },
-      {
-        firstName: "John",
-        lastName: "Smith",
-        email: "free@gmail.com",
-        password: "Password1",
-        role: "Other",
-        school: "Local School",
-        modelAccess: false,
-        progressionAccess: false,
-        confirmNumber: 123456,
         confirmStatus: true,
       },
     ];

@@ -50,10 +50,8 @@ const resolvers = {
         lastName,
         email,
         password,
+        organization,
         role,
-        school,
-        modelAccess,
-        progressionAccess,
         confirmNumber,
         confirmStatus,
       },
@@ -64,7 +62,7 @@ const resolvers = {
         const lowerFirstName = firstName.toLowerCase();
         const lowerLastName = lastName.toLowerCase();
         const lowerEmail = email.toLowerCase();
-        const lowerSchool = school.toLowerCase();
+        const lowerOrganization = organization.toLowerCase();
 
         const existingUser = await User.findOne({ email: lowerEmail });
 
@@ -109,9 +107,9 @@ const resolvers = {
             "Sign Up Failure: Your password cannot contain your email."
           );
         }
-        if (password.toLowerCase().includes(lowerSchool)) {
+        if (password.toLowerCase().includes(lowerOrganization)) {
           throw new Error(
-            "Sign Up Failure: Your password cannot contain your school."
+            "Sign Up Failure: Your password cannot contain your organization."
           );
         }
         if (firstName.length > 35) {
@@ -124,9 +122,9 @@ const resolvers = {
             "Sign Up Failure: Your last name must be less than 35 characters."
           );
         }
-        if (school.length > 60) {
+        if (organization.length > 60) {
           throw new Error(
-            "Sign Up Failure: Your school must be less than 60 characters."
+            "Sign Up Failure: Your organization must be less than 60 characters."
           );
         }
 
@@ -136,10 +134,8 @@ const resolvers = {
           lastName,
           email: lowerEmail,
           password,
+          organization,
           role,
-          school,
-          modelAccess,
-          progressionAccess,
           confirmNumber,
           confirmStatus,
         });
@@ -348,20 +344,20 @@ const resolvers = {
         }
 
         // Destructure the user's data from the found user object
-        const { firstName, lastName, school, role } = user;
+        const { firstName, lastName, organization, role } = user;
 
         // Send the email using nodemailer
         const info = await transporter.sendMail({
           from: '"ISCA No Reply" <theformatgrouptech@gmail.com>',
           to: "adminsupport@iscainfo.com",
           subject: "ISCA Publications New Confirmed User",
-          text: `New User\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nSchool: ${school}\nRole: ${role}`,
+          text: `New User\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nOrganization: ${organization}\nRole: ${role}`,
           html: `
         <p>New User</p>
         <p><b>First Name:</b> ${firstName}</p>
         <p><b>Last Name:</b> ${lastName}</p>
         <p><b>Email:</b> ${email}</p>
-        <p><b>School:</b> ${school}</p>
+        <p><b>Organization:</b> ${organization}</p>
         <p><b>Role:</b> ${role}</p>
       `,
         });

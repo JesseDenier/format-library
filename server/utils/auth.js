@@ -72,8 +72,15 @@ export function authMiddleware({ req }) {
 }
 
 // Method to sign a token with user data
-export function signToken({ firstName, lastName, email, role, school, _id }) {
-  const payload = { firstName, lastName, email, role, school, _id };
+export function signToken({
+  firstName,
+  lastName,
+  email,
+  organization,
+  role,
+  _id,
+}) {
+  const payload = { firstName, lastName, email, organization, role, _id };
   // Sign and return the token with the secret key and expiration time
   return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
 }

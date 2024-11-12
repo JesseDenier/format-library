@@ -21,8 +21,8 @@ const SignUpPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    organization: "",
     role: "",
-    school: "",
   });
 
   // State for password validation
@@ -114,7 +114,7 @@ const SignUpPage = () => {
       password !== formState.firstName &&
       password !== formState.lastName &&
       password !== formState.email &&
-      password !== formState.school;
+      password !== formState.organization;
 
     setPasswordValidation({
       length,
@@ -164,32 +164,24 @@ const SignUpPage = () => {
                   autoComplete="email"
                 />
               </div>
-              {/* Role selection */}
               <div className="mb-4">
-                <select
-                  name="role"
-                  value={formState.role}
+                <input
+                  className="w-full px-3 py-2 border rounded-md"
+                  placeholder="Organization"
+                  name="organization"
+                  type="text"
+                  value={formState.organization}
                   onChange={handleChange}
-                  className={`w-full px-3 py-2 border rounded-md ${
-                    formState.role ? "text-black" : "text-gray-500"
-                  }`}
-                >
-                  <option className="text-gray-500" value="" disabled>
-                    Role
-                  </option>
-                  <option value="School Counselor">School Counselor</option>
-                  <option value="Administrator">Administrator</option>
-                  <option value="Teacher">Teacher</option>
-                  <option value="Other">Other</option>
-                </select>
+                  autoComplete="organization"
+                />
               </div>
               <div className="mb-4">
                 <input
                   className="w-full px-3 py-2 border rounded-md"
-                  placeholder="School/Organization"
-                  name="school"
+                  placeholder="Role"
+                  name="role"
                   type="text"
-                  value={formState.school}
+                  value={formState.role}
                   onChange={handleChange}
                   autoComplete="organization"
                 />

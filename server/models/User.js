@@ -56,22 +56,14 @@ const userSchema = new Schema({
         "Your password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one numerical digit, and cannot match your name or email.",
     },
   },
-  role: {
-    type: String,
-    required: true,
-  },
-  school: {
+  organization: {
     type: String,
     required: true,
     trim: true,
   },
-  modelAccess: {
-    type: Boolean,
-    default: false,
-  },
-  progressionAccess: {
-    type: Boolean,
-    default: false,
+  role: {
+    type: String,
+    required: true,
   },
   confirmNumber: {
     type: Number,
