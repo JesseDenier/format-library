@@ -9,7 +9,7 @@ import { LOGOUT } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 // Imports the logo
-import ISCALogoWhite from "/isca_logo_white.svg";
+import Logo from "/format_logo.svg";
 
 // Functional component for the Header
 const Header = () => {
@@ -32,16 +32,12 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#006666] text-white p-2 fixed top-0 w-full z-10 max-h-20">
+    <header className="bg-[#9ad7d9] text-white p-2 fixed top-0 w-full z-10 max-h-20">
       <div className="flex items-center justify-between h-full">
         <div className="flex items-center h-full">
-          {/* Display the ISCA logo in the top left */}
+          {/* Display the Format logo in the top left */}
           <Link to="/" className="flex items-center h-full">
-            <img
-              src={ISCALogoWhite}
-              alt="ISCA Logos"
-              className="h-12 max-h-16 mr-2"
-            />
+            <img src={Logo} alt="Logo" className="h-12 max-h-16 mr-2" />
           </Link>
         </div>
         {/* Display a dynamic list of links in the top right */}
@@ -50,7 +46,7 @@ const Header = () => {
             {/* If user is NOT currently on the home page provide a link to the "Home" page */}
             {currentPath !== "/" && (
               <li>
-                <Link to="/" className="text-white">
+                <Link to="/" className="text-black">
                   Home
                 </Link>
               </li>
@@ -58,7 +54,7 @@ const Header = () => {
             {/* If user is NOT currently logged in and NOT on the log in page provide a link to the log in page */}
             {!Auth.loggedIn() && currentPath !== "/login" && (
               <li>
-                <Link to="/login" className="text-white">
+                <Link to="/login" className="text-black">
                   Log In
                 </Link>
               </li>
@@ -66,7 +62,7 @@ const Header = () => {
             {/* If user is NOT logged in and NOT on the sign up page provide a link to the sign up page */}
             {!Auth.loggedIn() && currentPath !== "/signup" && (
               <li>
-                <Link to="/signup" className="text-white">
+                <Link to="/signup" className="text-black">
                   Sign Up
                 </Link>
               </li>
@@ -76,7 +72,7 @@ const Header = () => {
               <li>
                 <button
                   onClick={handleLogout}
-                  className="text-white bg-transparent border-none cursor-pointer"
+                  className="text-black bg-transparent border-none cursor-pointer"
                 >
                   Log Out
                 </button>
