@@ -22,9 +22,7 @@ import LogInPage from "./pages/LogInPage";
 import SignUpPage from "./pages/SignUpPage";
 import ConfirmPage from "./pages/ConfirmPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
-import ComingSoonPage from "./pages/ComingSoonPage";
 import CEWDSamplerPage from "./pages/CEWDSamplerPage";
-import ModelSupportToolsPage from "./pages/ModelSupportToolsPage";
 
 // Imports the Welcome Pop Up
 import WelcomePopUp from "./components/WelcomePopUp";
@@ -57,21 +55,12 @@ const router = createBrowserRouter([
         element: <ForgotPasswordPage />,
       },
       {
-        path: "/comingsoon",
-        element: <ComingSoonPage />,
-      },
-      {
         path: "/cewdsampler",
         element: <CEWDSamplerPage />,
       },
       {
         element: <AuthRoute />, // Requires the user to be logged in and have confirmStatus true to view child pages
-        children: [
-          {
-            path: "/modelsupporttools",
-            element: <ModelSupportToolsPage />,
-          },
-        ],
+        children: [],
       },
     ],
   },
