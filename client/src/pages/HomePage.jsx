@@ -91,7 +91,7 @@ const HomePage = () => {
       labelStyle: "bg-[#F26A6A]",
     },
     {
-      link: "/private/isca_student_standards.pdf",
+      link: "/private/2022_CEWD.pdf",
       title: "2022 CEWD PDF",
       photo: "cover_student_standards.jpg",
       description: "Placeholder",
@@ -100,20 +100,22 @@ const HomePage = () => {
       isExternal: true,
     },
     {
-      link: "modelsupporttools",
+      link: "/private/UBC_High_School.pdf",
       title: "Union Skills PDF",
       photo: "cover_model_support_tools.jpg",
       description: "Placeholder",
       label: "Newsletter Only",
       labelStyle: "bg-[#F26A6A]",
+      isExternal: true,
     },
     {
-      link: "modelsupporttools",
+      link: "/private/Union_Skills.pdf",
       title: "UBC High School PDF",
       photo: "cover_model_support_tools.jpg",
       description: "Placeholder",
       label: "Newsletter Only",
       labelStyle: "bg-[#F26A6A]",
+      isExternal: true,
     },
   ];
 
