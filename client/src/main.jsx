@@ -60,14 +60,13 @@ const router = createBrowserRouter([
         path: "/comingsoon",
         element: <ComingSoonPage />,
       },
-
+      {
+        path: "/cewdsampler",
+        element: <CEWDSamplerPage />,
+      },
       {
         element: <AuthRoute />, // Requires the user to be logged in and have confirmStatus true to view child pages
         children: [
-          {
-            path: "/cewdsampler",
-            element: <CEWDSamplerPage />,
-          },
           {
             path: "/modelsupporttools",
             element: <ModelSupportToolsPage />,
