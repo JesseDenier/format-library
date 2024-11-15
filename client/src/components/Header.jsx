@@ -63,7 +63,7 @@ const Header = () => {
             {!Auth.loggedIn() && currentPath !== "/signup" && (
               <li>
                 <Link to="/signup" className="text-black">
-                  Sign Up
+                  Sign Up for Newsletter
                 </Link>
               </li>
             )}

@@ -9,12 +9,6 @@ import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../utils/queries";
 
-// Utility function to get ownership status and corresponding CSS class
-const getOwnershipStatus = (hasAccess) => ({
-  label: hasAccess ? "Paid" : "Purchase", // Display "Paid" if access is granted, otherwise "Purchase"
-  labelStyle: hasAccess ? "bg-[#006666] text-white" : "bg-[#FF6633] text-white", // Green background if access is granted, otherwise orange
-});
-
 // Reusable Card component
 function Card({
   title,
@@ -82,28 +76,44 @@ const HomePage = () => {
   const cards = [
     {
       link: "cewdsampler",
-      title: "2023 CEWD Digital Sampler",
+      title: "CEWD Course",
       photo: "cover_model.jpg",
       description: "Placeholder",
-      label: "Free",
-      labelStyle: "bg-[#006666] text-white",
+      label: "Open to All",
+      labelStyle: "bg-[#c4e7e8]",
+    },
+    {
+      link: "modelsupporttools",
+      title: "International Course",
+      photo: "cover_model_support_tools.jpg",
+      description: "Placeholder",
+      label: "Newsletter Only",
+      labelStyle: "bg-[#F26A6A]",
     },
     {
       link: "/private/isca_student_standards.pdf",
-      title: "CEWD Print Sampler",
+      title: "2022 CEWD PDF",
       photo: "cover_student_standards.jpg",
       description: "Placeholder",
-      label: "Free",
-      labelStyle: "bg-[#006666] text-white",
+      label: "Newsletter Only",
+      labelStyle: "bg-[#F26A6A]",
       isExternal: true,
     },
     {
       link: "modelsupporttools",
-      title: "Model Support Tools",
+      title: "Union Skills PDF",
       photo: "cover_model_support_tools.jpg",
       description: "Placeholder",
-      label: "Free",
-      labelStyle: "bg-[#006666] text-white",
+      label: "Newsletter Only",
+      labelStyle: "bg-[#F26A6A]",
+    },
+    {
+      link: "modelsupporttools",
+      title: "UBC High School PDF",
+      photo: "cover_model_support_tools.jpg",
+      description: "Placeholder",
+      label: "Newsletter Only",
+      labelStyle: "bg-[#F26A6A]",
     },
   ];
 
