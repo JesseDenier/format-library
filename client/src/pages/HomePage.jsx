@@ -9,6 +9,14 @@ import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../utils/queries";
 
+// Utility function to get label and style based on login status
+const getLabelStatus = (loggedIn) => ({
+  label: loggedIn
+    ? "Open to Newsletter Members"
+    : "Must Sign Up for Newsletter",
+  labelStyle: loggedIn ? "bg-[#c4e7e8]" : "bg-[#F26A6A]",
+});
+
 // Reusable Card component
 function Card({
   title,
@@ -62,12 +70,10 @@ const HomePage = () => {
 
   if (loggedIn) {
     const userId = Auth.getProfile().data._id; // Get logged-in user's ID
-    const { loading, data } = useQuery(QUERY_USER, { variables: { userId } });
+    const { loading } = useQuery(QUERY_USER, { variables: { userId } });
 
-    if (!loading && data) {
-      const user = data.user || {}; // Fetch user data
-    } else if (loading) {
-      // Return null or a loading spinner to prevent rendering
+    if (loading) {
+      // Return a loading spinner or placeholder while data is being fetched
       return <div>Loading...</div>;
     }
   }
@@ -87,16 +93,14 @@ const HomePage = () => {
       title: "International Course",
       photo: "cover_international.jpg",
       description: "Placeholder",
-      label: "Must Sign Up for Newsletter",
-      labelStyle: "bg-[#F26A6A]",
+      ...getLabelStatus(loggedIn),
     },
     {
       link: "/private/2022_CEWD.pdf",
       title: "2022 CEWD PDF",
       photo: "cover_2022_cewd.jpg",
       description: "Placeholder",
-      label: "Must Sign Up for Newsletter",
-      labelStyle: "bg-[#F26A6A]",
+      ...getLabelStatus(loggedIn),
       isExternal: true,
     },
     {
@@ -104,8 +108,7 @@ const HomePage = () => {
       title: "Union Skills PDF",
       photo: "cover_union_skills.jpg",
       description: "Placeholder",
-      label: "Must Sign Up for Newsletter",
-      labelStyle: "bg-[#F26A6A]",
+      ...getLabelStatus(loggedIn),
       isExternal: true,
     },
     {
@@ -113,8 +116,7 @@ const HomePage = () => {
       title: "UBC High School PDF",
       photo: "cover_ubc_high_school.jpg",
       description: "Placeholder",
-      label: "Must Sign Up for Newsletter",
-      labelStyle: "bg-[#F26A6A]",
+      ...getLabelStatus(loggedIn),
       isExternal: true,
     },
   ];
