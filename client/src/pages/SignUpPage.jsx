@@ -23,6 +23,7 @@ const SignUpPage = () => {
     confirmPassword: "",
     organization: "",
     role: "",
+    howHear: "",
   });
 
   // State for password validation
@@ -183,8 +184,29 @@ const SignUpPage = () => {
                   type="text"
                   value={formState.role}
                   onChange={handleChange}
-                  autoComplete="organization"
+                  autoComplete="organization-title"
                 />
+              </div>
+              {/* How Did You Hear About Us selection */}
+              <div className="mb-4">
+                <select
+                  name="howHear"
+                  value={formState.howHear}
+                  onChange={handleChange}
+                  className={`w-full px-3 py-2 border rounded-md ${
+                    formState.howHear ? "text-black" : "text-gray-500"
+                  }`}
+                >
+                  <option className="text-gray-500" value="" disabled>
+                    How Did You Hear About Us?
+                  </option>
+                  <option value="CEWD">CEWD Summit</option>
+                  <option value="ATD">ATD Conference</option>
+                  <option value="ASCA">ASCA Conference</option>
+                  <option value="DevLearn">DevLearn Expo</option>
+                  <option value="TCEA">TCEA Convention</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
               <div className="mb-6">
                 <ul className="text-sm grid grid-cols-2 gap-2 list-disc pl-4 ml-2 mb-4">

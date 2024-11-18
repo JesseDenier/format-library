@@ -26,6 +26,7 @@ const seedData = async () => {
         password: "Goodddog1",
         organization: "The Format Group",
         role: "Seedling",
+        howHear: "Other",
         confirmNumber: 567890,
         confirmStatus: true,
       },

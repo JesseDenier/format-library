@@ -9,6 +9,7 @@ export const ADD_USER = gql`
     $password: String!
     $organization: String!
     $role: String!
+    $howHear: String!
     $confirmNumber: Int!
     $confirmStatus: Boolean
   ) {
@@ -19,6 +20,7 @@ export const ADD_USER = gql`
       password: $password
       organization: $organization
       role: $role
+      howHear: $howHear
       confirmNumber: $confirmNumber
       confirmStatus: $confirmStatus
     ) {
@@ -30,6 +32,7 @@ export const ADD_USER = gql`
         email
         organization
         role
+        howHear
         confirmNumber
         confirmStatus
       }

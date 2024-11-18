@@ -65,6 +65,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  howHear: {
+    type: String,
+    required: true,
+  },
   confirmNumber: {
     type: Number,
     required: true,

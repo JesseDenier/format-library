@@ -10,6 +10,7 @@ export const QUERY_USER = gql`
       email
       organization
       role
+      howHear
       confirmNumber
       confirmStatus
     }
@@ -25,6 +26,7 @@ export const CHECK_USER_EMAIL = gql`
       email
       organization
       role
+      howHear
       confirmNumber
       confirmStatus
     }

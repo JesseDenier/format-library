@@ -25,6 +25,7 @@ const typeDefs = gql`
     password: String!
     organization: String!
     role: String!
+    howHear: String!
     confirmNumber: Int!
     confirmStatus: Boolean!
   }
@@ -49,6 +50,7 @@ const typeDefs = gql`
       password: String!
       organization: String!
       role: String!
+      howHear: String!
       confirmNumber: Int!
       confirmStatus: Boolean
     ): AuthPayload

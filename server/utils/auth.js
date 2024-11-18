@@ -78,9 +78,18 @@ export function signToken({
   email,
   organization,
   role,
+  howHear,
   _id,
 }) {
-  const payload = { firstName, lastName, email, organization, role, _id };
+  const payload = {
+    firstName,
+    lastName,
+    email,
+    organization,
+    role,
+    howHear,
+    _id,
+  };
   // Sign and return the token with the secret key and expiration time
   return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
 }

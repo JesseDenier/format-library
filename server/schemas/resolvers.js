@@ -52,6 +52,7 @@ const resolvers = {
         password,
         organization,
         role,
+        howHear,
         confirmNumber,
         confirmStatus,
       },
@@ -136,6 +137,7 @@ const resolvers = {
           password,
           organization,
           role,
+          howHear,
           confirmNumber,
           confirmStatus,
         });
@@ -345,14 +347,14 @@ const resolvers = {
         }
 
         // Destructure the user's data from the found user object
-        const { firstName, lastName, organization, role } = user;
+        const { firstName, lastName, organization, role, howHear } = user;
 
         // Send the email using nodemailer
         const info = await transporter.sendMail({
           from: '"Format Sample No Reply" <theformatgrouptech@gmail.com>',
           to: "kristy@formatllc.com",
           subject: "Format Sample Site New Confirmed User",
-          text: `New User\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nOrganization: ${organization}\nRole: ${role}`,
+          text: `New User\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nOrganization: ${organization}\nRole: ${role}\nHow Hear: ${howHear}`,
           html: `
         <p>New User</p>
         <p><b>First Name:</b> ${firstName}</p>
@@ -360,6 +362,7 @@ const resolvers = {
         <p><b>Email:</b> ${email}</p>
         <p><b>Organization:</b> ${organization}</p>
         <p><b>Role:</b> ${role}</p>
+        <p><b>How Hear:</b> ${howHear}</p>
       `,
         });
 
