@@ -87,7 +87,7 @@ const HomePage = () => {
       title: "International Course",
       photo: "cover_international.jpg",
       description: "Placeholder",
-      label: "Newsletter Only",
+      label: "Must Sign Up for Newsletter",
       labelStyle: "bg-[#F26A6A]",
     },
     {
@@ -95,7 +95,7 @@ const HomePage = () => {
       title: "2022 CEWD PDF",
       photo: "cover_2022_cewd.jpg",
       description: "Placeholder",
-      label: "Newsletter Only",
+      label: "Must Sign Up for Newsletter",
       labelStyle: "bg-[#F26A6A]",
       isExternal: true,
     },
@@ -104,7 +104,7 @@ const HomePage = () => {
       title: "Union Skills PDF",
       photo: "cover_union_skills.jpg",
       description: "Placeholder",
-      label: "Newsletter Only",
+      label: "Must Sign Up for Newsletter",
       labelStyle: "bg-[#F26A6A]",
       isExternal: true,
     },
@@ -113,7 +113,7 @@ const HomePage = () => {
       title: "UBC High School PDF",
       photo: "cover_ubc_high_school.jpg",
       description: "Placeholder",
-      label: "Newsletter Only",
+      label: "Must Sign Up for Newsletter",
       labelStyle: "bg-[#F26A6A]",
       isExternal: true,
     },
@@ -124,10 +124,9 @@ const HomePage = () => {
       {/* Tagline centered above the cards */}
       <div className="text-center mb-4 w-3/4 mx-auto">
         <h2 className="text-xl font-semibold">
-          Welcome to The Format Group's Sample Library! Explore our diverse
-          educational materials and see firsthand the type of asynchronous
-          learning management systems we can build. Create an account, log in,
-          and discover all we have to offer!
+          Welcome to The Format Group's Sample Library! Explore our educational
+          materials and see firsthand the type of content library systems we can
+          build!
         </h2>
       </div>
       {/* Container for the home page content */}
