@@ -129,9 +129,9 @@ const HomePage = () => {
   ];
 
   return (
-    <main className="px-4 mx-auto pt-20 py-8">
+    <main className="pt-20 pb-16">
       {/* Tagline centered above the cards */}
-      <div className="text-center mb-4 w-3/4 mx-auto">
+      <div className="text-center mb-4 w-3/4 mx-auto px-4">
         <h2 className="text-xl font-semibold">
           Welcome to The Format Group's Sample Library! Explore our educational
           materials and see firsthand the type of content library systems we can
@@ -139,7 +139,7 @@ const HomePage = () => {
         </h2>
       </div>
       {/* Container for the home page content */}
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center px-4">
         {cards.map((card, index) => (
           <Card
             key={index} // Unique key for each card in the map
@@ -154,6 +154,14 @@ const HomePage = () => {
           />
         ))}
       </div>
+      {/* Fixed Footer */}
+      <footer className="bg-[#9ad7d9] fixed bottom-0 w-full py-4">
+        <div className="text-center">
+          <a href="mailto:admin@formatllc.com" className="hover:underline">
+            Have questions? Contact Us
+          </a>
+        </div>
+      </footer>
     </main>
   );
 };
