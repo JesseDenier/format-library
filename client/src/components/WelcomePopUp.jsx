@@ -23,8 +23,8 @@ const WelcomePopup = () => {
             Welcome to The Format Group's Sample Site!
           </h2>
           <p className="mb-6">
-            To access materials, please log in or sign up and then browse all
-            our great content!
+            Pleasebrowse all our great content, and don't forget to sign up for
+            the newsletter!
           </p>
           <button
             className="w-2/5 font-bold py-2 px-4 rounded shadow-md bg-[#bfd9d9] hover:bg-[#006666] hover:text-white"
