@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="3.0" xml:lang="en" unique-identifier="pub-id" prefix="cc: http://creativecommons.org/ns# rendition: http://www.idpf.org/vocab/rendition/# kotobee: https://www.kotobee.com/vocab# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" xmlns="http://www.idpf.org/2007/opf">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+        <dc:title id="title">International Course</dc:title>
+
+        <dc:identifier id="pub-id">urn:uuid:6350efab-2bce-57bf-e252-b1a317990c8b</dc:identifier>
+        <meta name="cover" content="img20" />
+
+        <dc:creator>The Format Group</dc:creator>
+        <dc:publisher>The Format Group</dc:publisher>
+        <dc:rights>The Format Group</dc:rights>
+        <dc:language>en</dc:language>
+        <dc:description>&lt;p&gt;This&amp;nbsp;edition of the &amp;ldquo;International Model Sample&amp;rdquo; is for sample purposes only and includes no usable information.&lt;/p&gt;
+</dc:description>
+        <meta property="dcterms:modified">2024-11-19T11:01:50Z</meta>
+        <meta property="rendition:layout">reflowable</meta>
+        <meta property="rendition:orientation">auto</meta>
+        <meta property="ibooks:interactive">true</meta>
+        <meta property="ibooks:specified-fonts">false</meta>
+        <meta property="kotobee:version">1.8.11</meta>
+        <meta property="kotobee:build">3113</meta>
+
+        <!-- DAISY requirements -->
+        <meta property="schema:accessMode">textual</meta>
+        <meta property="schema:accessMode">visual</meta>
+        <meta property="schema:accessModeSufficient">textual, visual</meta>
+        <meta property="schema:accessibilityFeature">structuralNavigation</meta> 
+        <meta property="schema:accessibilityHazard">none</meta> 
+        <meta property="schema:accessibilitySummary">The publication contains structural and page navigation.</meta>
+
+
+    </metadata>
+    <manifest>
+        <item id="html0" href="xhtml/raw/sdzq2e.xhtml" media-type="application/xhtml+xml"/>
+<item id="html1" href="xhtml/raw/stbppc.xhtml" media-type="application/xhtml+xml"/>
+<item id="html2" href="xhtml/raw/szwtto.xhtml" media-type="application/xhtml+xml"/>
+<item id="html3" href="xhtml/raw/sgnt4x.xhtml" media-type="application/xhtml+xml"/>
+<item id="contents" href="xhtml/raw/contents.xhtml"  properties="nav" media-type="application/xhtml+xml"/>
+<item id="ncx" href="xhtml/raw/contents.ncx"  media-type="application/x-dtbncx+xml"/>
+<item id="img0" href="imgs/defaultCover.png" media-type="image/png"/>
+<item id="img1" href="imgs/formatadditionalreso.png" media-type="image/png"/>
+<item id="img2" href="imgs/ialogo.png" media-type="image/png"/>
+<item id="img3" href="imgs/isca_logo_acronym.png" media-type="image/png"/>
+<item id="img4" href="imgs/isca_logo_acronym01.png" media-type="image/png"/>
+<item id="img5" href="imgs/isca_weblinkicon.png" media-type="image/png"/>
+<item id="img6" href="imgs/isca_weblinkicon01.png" media-type="image/png"/>
+<item id="img7" href="imgs/isca_weblinkicon02.png" media-type="image/png"/>
+<item id="img8" href="imgs/isca_weblinkicon03.png" media-type="image/png"/>
+<item id="img9" href="imgs/iscapiechart03.png" media-type="image/png"/>
+<item id="img10" href="imgs/iscatravelicon.png" media-type="image/png"/>
+<item id="img11" href="imgs/iscatravelicon01.png" media-type="image/png"/>
+<item id="img12" href="imgs/supporttools.png" media-type="image/png"/>
+<item id="img13" href="imgs/supporttools01.png" media-type="image/png"/>
+<item id="img14" href="imgs/supporttools02.png" media-type="image/png"/>
+<item id="img15" href="imgs/supporttools03.png" media-type="image/png"/>
+<item id="img16" href="imgs/supporttools04.png" media-type="image/png"/>
+<item id="img17" href="imgs/supporttools05.png" media-type="image/png"/>
+<item id="img18" href="imgs/supporttools06.png" media-type="image/png"/>
+<item id="img19" href="imgs/timemanagement.png" media-type="image/png"/>
+<item id="img20" href="imgs/usersjessedenierbo01.jpg" properties="cover-image" media-type="image/jpeg"/>
+<item id="img21" href="imgs/usersjessedenierboot.jpg" media-type="image/jpeg"/>
+<item id="css0" href="css/base.css" media-type="text/css"/>
+<item id="css1" href="css/global.css" media-type="text/css"/>
+<item id="css2" href="css/kotobeeInteractive.css" media-type="text/css"/>
+<item id="js0" href="js/global.js" media-type="text/javascript"/>
+<item id="js1" href="js/kotobeeInteractive.js" media-type="text/javascript"/>
+
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="html0" properties="rendition:layout-reflowable"/>
+<itemref idref="html1" properties="rendition:layout-reflowable"/>
+<itemref idref="html2" properties="rendition:layout-reflowable"/>
+<itemref idref="html3" properties="rendition:layout-reflowable"/>
+
+    </spine>
+
+    
+    
+</package>

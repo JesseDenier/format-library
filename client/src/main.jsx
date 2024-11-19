@@ -23,6 +23,8 @@ import SignUpPage from "./pages/SignUpPage";
 import ConfirmPage from "./pages/ConfirmPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import CEWDSamplerPage from "./pages/CEWDSamplerPage";
+import IntCoursePage from "./pages/IntCoursePage";
+import UniCoursePage from "./pages/UniCoursePage";
 
 // Imports the Welcome Pop Up
 import WelcomePopUp from "./components/WelcomePopUp";
@@ -60,7 +62,16 @@ const router = createBrowserRouter([
       },
       {
         element: <AuthRoute />, // Requires the user to be logged in and have confirmStatus true to view child pages
-        children: [],
+        children: [
+          {
+            path: "/internationalcourse",
+            element: <IntCoursePage />,
+          },
+          {
+            path: "/universitycourse",
+            element: <UniCoursePage />,
+          },
+        ],
       },
     ],
   },
